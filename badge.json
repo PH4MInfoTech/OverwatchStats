@@ -3,5 +3,6 @@
     "label": "Rank: Unranked",
     "message": "Unranked =",
     "color": "333333",
+    "labelColor": "333333",
     "style": "for-the-badge"
 }
