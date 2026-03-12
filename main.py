@@ -99,15 +99,8 @@ def run_tracker():
     badge_color, badge_label = get_tier_styles(current_rank)
 
     # 5. Update Badge JSON
-    with open(BADGE_FILE, 'w') as f:
-        json.dump({
-            "schemaVersion": 1,
-            "label": badge_label,
-            "message": f"{current_rank}{trend}",
-            "color": badge_color,
-            "style": "for-the-badge"
-        }, f, indent=4)
-
+    update_badge_json(current_rank, trend, badge_color, badge_label)
+    
     # 6. Update History File
     history.append({
         "date": datetime.now().strftime("%Y-%m-%d"),
